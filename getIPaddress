@@ -1,0 +1,19 @@
+package com.company;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
+class Main {
+       public static void main(String[] args) {
+InetAddress currentIP = null;
+InetAddress bsuIP = null;
+try {
+    currentIP = InetAddress.getLocalHost();
+    System.out.println("my IP = " + currentIP.getHostAddress());
+    bsuIP = InetAddress.getByName("wwww.yandex.com");
+    System.out.println("Yandex = " + bsuIP.getHostAddress());
+}
+catch (UnknownHostException e) {
+    System.out.println("Address unavailable" + e);
+}}
+}
